@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập layout tạo một trang web có cấu trúc, bố cục</title>
+  </head>
+  <body>
+    <header>
+      <div
+        id="loGo"
+        style="
+          width: 10%;
+          height: 95px;
+          float: left;
+          background-color: rgba(223, 150, 16, 0.699);
+        "
+      >
+        <img
+          src="https://fullstack.edu.vn/assets/icon/f8_icon.png"
+          alt="logo"
+          style="width: 100%; height: auto"
+        />
+      </div>
+      <div style="width: 90%; float: right; background-color: lightblue">
+        <h1>Welcome to My Website</h1>
+        <nav>
+          <a href="#" target="_blank">Trang chủ</a> <span>|</span>
+          <a href="# " target="_blank"> Giới Thiệu</a><span>|</span>
+          <a href="#" target="_blank">Dịch Vụ</a><span>|</span>
+          <a href="#" target="_blank">Liên hệ</a><span>|</span>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div
+        id="content"
+        style="
+          width: 80%;
+          float: left;
+          background-color: rgba(6, 250, 197, 0.658);
+        "
+      >
+        <section style="background: lightgray">
+          <h2>Thông Tin Kinh Tế</h2>
+          <p>
+            Đây là phần nội dung về kinh tế. Bạn có thể thêm thông tin chi tiết
+            ở đây.
+          </p>
+        </section>
+        <section style="background: lightgray">
+          <h2>Thông Tin Thể Thao</h2>
+          <p>
+            Đây là phần nội dung về thể thao. Bạn có thể thêm thông tin chi tiết
+            ở đây.
+          </p>
+        </section>
+        <section style="background: lightgray">
+          <h2>Thông Tin Giải Trí</h2>
+          <p>
+            Đây là phần nội dung về giải trí. Bạn có thể thêm thông tin chi tiết
+            ở đây.
+          </p>
+        </section>
+      </div>
+      <aside
+        id="adv"
+        style="width: 20%; float: right; background-color: rgb(18, 128, 91)"
+      >
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+        Quảng cáo <br />
+      </aside>
+
+      <br style="clear: both" />
+    </main>
+
+    <footer style="background-color: darkcyan">
+      <hr />
+      <p style="text-align: center">
+        &copy; 2018 - 2025 F8. Nền tảng học lập trình hàng đầu Việt Nam
+      </p>
+    </footer>
+  </body>
+</html>
+<!-- Chú thích:
+ thuộc tính target="_blank": dùng để mở link trong một tab mới hoặc cửa sổ mới của trình duyệt.
+
+_self (mặc định): mở trong tab hiện tại.
+_blank: mở tab mới.
+thuộc tính section: dùng để nhóm các nội dung có liên quan thành một phần (section) riêng biệt của trang web. 
+Thẻ <article>: được sử dụng cho các phần có ý nghĩa riêng biệt và có thể độc lập với những phần còn lại của - website (Bài viết, sản phẩm, bình luận,…).
+Thẻ <aside>: được sử dụng để chứa những thông tin bên cạnh nội dung chính.
+Thẻ <nav>: được sử dụng để chứa các liên kết điều hướng trong trang.
+Thẻ <section>: được sử dụng để tạo thành một khu vực bao gồm những nội dung giống nhau (Khu vực giới thiệu, khu - vực sản phẩm, khu vực tin tức,…).-->

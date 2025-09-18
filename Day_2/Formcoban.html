@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Biểu Mẫu Đăng Ký</title>
+  </head>
+  <body>
+    <form class="container">
+      <fieldset>
+        <legend>Thông tin tài khoản</legend>
+        <label for="">Họ và tên: </label>
+        <input type="text" name="hoVaTen" id="hoVaTen" />
+        <br /><br />
+        <label for="">Hòm thư: </label>
+        <input type="email" name="email" id="email" />
+        <br /><br />
+        <label for="">Mật khẩu: </label>
+        <input type="password" name="matKhau" id="matKhau" />
+        <br /><br />
+        <label for="">Xác nhận mật khẩu: </label>
+        <input type="password" name="xacNhanMatKhau" id="xacNhanMatKhau" />
+        <br /><br />
+      </fieldset>
+      <fieldset>
+        <legend>Thông tin cá nhân</legend>
+        <label>Giới tính: </label>
+        <input type="radio" name="gioiTinh" id="nam" /> <span>Nam</span>
+        <input type="radio" name="gioiTinh" id="nu" /><span>Nữ</span>
+        <input type="radio" name="gioiTinh" id="khac" /><span>Khác</span>
+        <br /><br />
+        <label>Sở thích: </label>
+        <input type="checkbox" name="soThich" id="theThao" /><span
+          >Thể thao</span
+        >
+        <input type="checkbox" name="soThich" id="amNhac" /><span>Âm nhạc</span>
+        <input type="checkbox" name="soThich" id="duLich" /><span>Du lịch</span>
+        <br /><br />
+        <label for="">Ngày sinh: </label>
+        <input type="date" name="ngaySinh" id="ngaySinh" />
+        <br /><br />
+        <label for="">Quốc gia:</label>
+        <select name="quocGia" id="quocGia">
+          <option value="vn">Việt Nam</option>
+          <option value="us">Mỹ</option>
+          <option value="kr">Hàn Quốc</option>
+          <option value="jp">Nhật Bản</option>
+          <option value="rf">Liên Bang Nga</option>
+        </select>
+        <br /><br />
+        <label for="">Số điện thoại: </label>
+        <input type="tel" name="soDienThoai" id="soDienThoai" />
+        <br /><br />
+        <label for="">Địa chỉ liên hệ:</label> <br />
+        <textarea name="diaChi" id="diaChi" cols="40" rows="3"></textarea>
+        <br /><br />
+        <div style="text-align: center">
+          <button type="submit" onclick=" alert('Đã gửi thành công')">
+            Gửi
+          </button>
+          <button type="reset" onclick=" alert('Mời nhập lại')">Huỷ</button>
+        </div>
+      </fieldset>
+    </form>
+    <style>
+      .container {
+        width: 45%;
+        background: rgba(15, 119, 20, 0.37);
+        margin: 0 auto;
+      }
+
+      @media screen and (max-width: 767.98px) {
+        .container {
+          width: 90%;
+        }
+      }
+    </style>
+  </body>
+</html>
