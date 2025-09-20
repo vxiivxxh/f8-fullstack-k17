@@ -9,51 +9,80 @@
     <form class="container">
       <fieldset>
         <legend>Thông tin tài khoản</legend>
-        <label for="">Họ và tên: </label>
-        <input type="text" name="hoVaTen" id="hoVaTen" />
-        <br /><br />
-        <label for="">Hòm thư: </label>
-        <input type="email" name="email" id="email" />
-        <br /><br />
-        <label for="">Mật khẩu: </label>
-        <input type="password" name="matKhau" id="matKhau" />
-        <br /><br />
-        <label for="">Xác nhận mật khẩu: </label>
-        <input type="password" name="xacNhanMatKhau" id="xacNhanMatKhau" />
-        <br /><br />
+        <div>
+          <label for="hoVaTen">Họ và tên: </label>
+          <input type="text" name="hoVaTen" id="hoVaTen" />
+        </div>
+        <div>
+          <label for="email">Hòm thư: </label>
+          <input type="email" name="email" id="email" />
+        </div>
+        <div>
+          <label for="matKhau">Mật khẩu: </label>
+          <input type="password" name="matKhau" id="matKhau" />
+        </div>
+        <div>
+          <label for="xacNhanMatKhau">Xác nhận mật khẩu: </label>
+          <input type="password" name="xacNhanMatKhau" id="xacNhanMatKhau" />
+        </div>
       </fieldset>
       <fieldset>
         <legend>Thông tin cá nhân</legend>
-        <label>Giới tính: </label>
-        <input type="radio" name="gioiTinh" id="nam" /> <span>Nam</span>
-        <input type="radio" name="gioiTinh" id="nu" /><span>Nữ</span>
-        <input type="radio" name="gioiTinh" id="khac" /><span>Khác</span>
-        <br /><br />
-        <label>Sở thích: </label>
-        <input type="checkbox" name="soThich" id="theThao" /><span
-          >Thể thao</span
-        >
-        <input type="checkbox" name="soThich" id="amNhac" /><span>Âm nhạc</span>
-        <input type="checkbox" name="soThich" id="duLich" /><span>Du lịch</span>
-        <br /><br />
-        <label for="">Ngày sinh: </label>
-        <input type="date" name="ngaySinh" id="ngaySinh" />
-        <br /><br />
-        <label for="">Quốc gia:</label>
-        <select name="quocGia" id="quocGia">
-          <option value="vn">Việt Nam</option>
-          <option value="us">Mỹ</option>
-          <option value="kr">Hàn Quốc</option>
-          <option value="jp">Nhật Bản</option>
-          <option value="rf">Liên Bang Nga</option>
-        </select>
-        <br /><br />
-        <label for="">Số điện thoại: </label>
-        <input type="tel" name="soDienThoai" id="soDienThoai" />
-        <br /><br />
-        <label for="">Địa chỉ liên hệ:</label> <br />
-        <textarea name="diaChi" id="diaChi" cols="40" rows="3"></textarea>
-        <br /><br />
+        <div>
+          <label>Giới tính: </label>
+          <input type="radio" name="gioiTinh" id="nam" value="nam" />
+          <span>Nam</span>
+          <input type="radio" name="gioiTinh" id="nu" value="nu" /><span
+            >Nữ</span
+          >
+          <input type="radio" name="gioiTinh" id="khac" value="khac" /><span
+            >Khác</span
+          >
+        </div>
+        <div>
+          <label>Sở thích: </label>
+          <input
+            type="checkbox"
+            name="soThich"
+            id="theThao"
+            value="theThao"
+          /><span>Thể thao</span>
+          <input
+            type="checkbox"
+            name="soThich"
+            id="amNhac"
+            value="amNhac"
+          /><span>Âm nhạc</span>
+          <input
+            type="checkbox"
+            name="soThich"
+            id="duLich"
+            value="duLich"
+          /><span>Du lịch</span>
+        </div>
+        <div>
+          <label for="ngaySinh">Ngày sinh: </label>
+          <input type="date" name="ngaySinh" id="ngaySinh" />
+        </div>
+        <div>
+          <label for="quocGia">Quốc gia:</label>
+          <select name="quocGia" id="quocGia">
+            <option value="vn">Việt Nam</option>
+            <option value="us">Mỹ</option>
+            <option value="kr">Hàn Quốc</option>
+            <option value="jp">Nhật Bản</option>
+            <option value="rf">Liên Bang Nga</option>
+          </select>
+        </div>
+        <div>
+          <label for="soDienThoai">Số điện thoại: </label>
+          <input type="tel" name="soDienThoai" id="soDienThoai" />
+        </div>
+        <div>
+          <label for="diaChi">Địa chỉ liên hệ:</label> <br />
+          <textarea name="diaChi" id="diaChi" cols="40" rows="3"></textarea>
+        </div>
+
         <div style="text-align: center">
           <button type="submit" onclick=" alert('Đã gửi thành công')">
             Gửi
@@ -74,6 +103,19 @@
           width: 90%;
         }
       }
+
+      fieldset div {
+        margin-bottom: 12px;
+        display: block;
+      }
     </style>
   </body>
 </html>
+<!--  Giải thích:
+   - Quy tắc này áp dụng cho mọi thẻ <div> nằm bên trong thẻ <fieldset>.
+   - margin-bottom: 12px; tạo khoảng cách 12px phía dưới mỗi <div>.
+   - display: block; đảm bảo mỗi <div> sẽ hiển thị như một khối, chiếm toàn bộ chiều ngang cha của nó.
+ Giải thích:
+   - Đây là một media query. Nó áp dụng các quy tắc CSS bên trong khi màn hình có chiều rộng nhỏ hơn hoặc bằng 767.98px (thường là trên thiết bị di động).
+   - .container { width: 90%; } nghĩa là phần tử có class "container" sẽ chiếm 90% chiều rộng của màn hình trên thiết bị nhỏ.
+ -->
