@@ -1,22 +1,23 @@
 div {
     background: lightskyblue;
-    display: table;
-    box-shadow: 20px 10px 10px rgba(15, 15, 15, 0.65);
-    border-radius: 20px;
+    display: table; /* để canh giữa theo chiều dọc */
+    margin: 100px auto; /* canh giữa theo chiều ngang */
+    box-shadow: 20px 10px 10px rgba(15, 15, 15, 0.65); /* đổ bóng */
+    border-radius: 20px; /* bo góc */
     transform: rotate(15deg);
 }
 
 pre {
     color: white;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Times New Roman", Times, serif; 
     font-style: italic;
-    font-size: 1em;
-    width: 400px;
-    height: 200px;
+    font-size: 1em; 
+    width: 400px;   
+    height: 200px;  
     text-align: center;
     padding: 20px;
-    display: table-cell;
-    vertical-align: middle;
+    display: table-cell; /* để canh giữa theo chiều dọc */
+    vertical-align: middle; /* để canh giữa theo chiều dọc */
 }
 
 span {
