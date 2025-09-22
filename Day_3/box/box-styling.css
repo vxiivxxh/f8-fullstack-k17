@@ -17,7 +17,7 @@ pre {
     text-align: center;
     padding: 20px;
     display: table-cell; /* để canh giữa theo chiều dọc */
-    vertical-align: middle; /* để canh giữa theo chiều dọc */
+    vertical-align: middle; /* để canh giữa theo chiều dọc*/
 }
 
 span {
