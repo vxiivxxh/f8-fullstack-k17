@@ -1,0 +1,24 @@
+table {
+  border-collapse: collapse; /* Gộp các đường viền của bảng */
+  box-shadow: 10px 10px 5px rgb(102, 179, 140);
+  width: fit-content; /* Chỉ rộng bằng nội dung bên trong */
+  margin: auto; /* Căn giữa bảng trong khung chứa */
+}
+table,
+th,
+td {
+  border: 0.5px solid black;
+  padding: 10px; /* Thêm khoảng cách bên trong ô */
+}
+th {
+  background-color: lightgray;
+}
+tr:nth-child(odd) {
+  background-color: aqua; /* Màu nền cho hàng lẻ */
+}
+tr:nth-child(even) {
+  background-color: white; /* Màu nền cho hàng chẵn */
+}
+tr:hover {
+  background-color: lightpink; /* Màu nền khi di chuột qua hàng */
+}
