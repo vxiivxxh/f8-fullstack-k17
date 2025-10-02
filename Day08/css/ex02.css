@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.btn-label {
+  display: inline-block;
+  position: absolute;
+  width: 120px;
+  height: 54px;
+  top: 20%;
+  left: 50%;
+  margin: 40px auto;
+  border: 0;
+  border-radius: 40px;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-label::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  transition: transform 0.3s ease;
+}
+#btn:checked + .btn-label {
+  background: green;
+}
+#btn:checked + .btn-label::after {
+  transform: translateX(calc(120px - 50px - 4px));
+}
