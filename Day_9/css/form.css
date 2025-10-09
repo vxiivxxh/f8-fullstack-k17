@@ -262,6 +262,59 @@ a {
   color: var(--second-color);
 }
 
+.form-login button {
+  background-color: #5a55fa;
+  box-shadow: 4px 7px 12px 0 rgba(35, 210, 226, 0.2);
+  border-radius: 10px;
+  height: 54px;
+  transition: background-color 0.2s ease;
+  color: var(--first-color);
+  font-weight: bold;
+  padding: 15px;
+  cursor: pointer;
+}
+.form-login button:hover {
+  background-color: rgba(88, 83, 228, 0.295);
+}
+.form-login .social-links{
+   display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.form-login .social-links i{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+}
+.form-login .social-links #facebook {
+  color: white;
+  background: #3763d2;
+  transition: translate 0.5s;
+}
+
+.form-login .social-links #twitter {
+  color: white;
+  background: #1abcff;
+  transition: translate 0.5s;
+}
+
+.form-login .social-links #twitch {
+  color: white;
+  background: #7b5dfa;
+  transition: translate 0.5s;
+}
+
+.form-login .social-links #youtube {
+  color: white;
+  background: #fd434f;
+  transition: translate 0.5s;
+}
+
+
 .landing-form-register {
   position: fixed;
   display: block;
