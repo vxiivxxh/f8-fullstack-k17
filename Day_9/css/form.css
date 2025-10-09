@@ -1,0 +1,279 @@
+@import url("https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css);
+
+:root {
+  --first-font: Rajdhani, sans-serif;
+  --second-font: Titillium Web, sans-serif;
+  --third-font: Segoe UI, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --first-color: #fff;
+  --second-color: #23d2e2;
+  --text-color: #3e3f5e;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 24px;
+  font-weight: 500;
+  font-family: var(--third-font);
+  overflow: hidden;
+}
+p,
+a,
+label {
+  font-family: var(--first-font);
+}
+img {
+  height: auto;
+  display: block;
+}
+
+h2 {
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 9rem;
+  font-weight: 900;
+  position: relative;
+  top: -10px;
+  line-height: 1em;
+  text-transform: uppercase;
+}
+h2 .landing-page-title {
+  margin-top: 36px;
+  margin-bottom: 50px;
+
+  font-size: 2rem;
+  font-weight: 500;
+}
+.landing-page-title {
+  font-family: var(--second-font);
+  color: var(--first-color);
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  color: initial;
+}
+.page {
+  height: 100vh;
+  background: url(../image/landing-background.jpg) center / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+.page .page-background-right {
+  width: 64%;
+  height: 140%;
+  position: absolute;
+  top: -150px;
+  right: -50px;
+  background: url(../image/dot-texture.png);
+  background-color: var(--first-color);
+  border-radius: 50%;
+  translate: 50%;
+}
+
+/* Information */
+.landing-information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  top: 300px;
+  left: 400px;
+}
+.landing-information svg {
+  display: inline-block;
+  align-items: center;
+  fill: var(--first-color);
+  width: 40px;
+  padding-top: 100px;
+}
+.landing-information p {
+  color: var(--first-color);
+  font-weight: 500;
+  font-size: 1.6rem;
+  text-align: center;
+}
+.landing-information .tab-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--first-color);
+  margin-top: 75px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  border: 1px solid var(--first-color);
+  border-radius: 10px;
+}
+.landing-information .tab-switch label {
+  border: 1px solid #fff;
+  width: 280px;
+  height: 54px;
+}
+
+.landing-information .tab-switch .login,
+.landing-information .tab-switch .register {
+  padding: 15px 100px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--first-color);
+  cursor: pointer;
+}
+#login-toggle:checked ~ .landing-information label[for="login-toggle"],
+#register-toggle:checked ~ .landing-information label[for="register-toggle"] {
+  color: black;
+  background: white;
+}
+
+/* Form */
+.landing-form-login h2 {
+  text-align: center;
+  font-size: 2.6rem;
+}
+.landing-form-login {
+  position: fixed;
+  display: block;
+  border: 1px solid var(--first-color);
+  background: var(--first-color);
+  border-radius: 10px;
+  width: 550px;
+  top: 35%;
+  right: 15%;
+  height: 500px;
+  padding: 16px;
+  translate: 0;
+  opacity: 1;
+  transition: all 2s ease;
+  font-family: var(--first-font);
+}
+
+.landing-form-login .form-login-logo {
+  position: absolute;
+  top: -65px;
+  left: -80px;
+}
+.landing-form-login .form-login {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 50px;
+}
+.input-login-register {
+  position: relative;
+  margin-bottom: 30px;
+}
+.input-login-register label {
+  cursor: text;
+}
+.input {
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 20px 20px;
+  outline: none;
+  border: 1px solid #adafca;
+}
+.label {
+  position: absolute;
+  top: 55%;
+  translate: 0 -50%;
+  left: 18px;
+  color: #adafca;
+  font-weight: 600;
+  display: block;
+  background-color: var(--primary-color);
+  transform-origin: top left;
+  transition: all 0.5s ease;
+}
+.input:focus {
+  border-color: #615dfa;
+}
+
+.input:focus ~ .label {
+  top: -1px;
+  transform: scale(0.8);
+}
+
+.input:valid ~ .label {
+  top: -1px;
+  transform: scale(0.8);
+}
+.landing-form-login .form-login .form-login-aside {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.5rem;
+}
+.form-login-aside .login-remember {
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.form-login-aside .login-remember .icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #adafca94;
+  border-radius: 6px;
+  width: 30px;
+  height: 30px;
+  overflow: hidden;
+}
+.form-login-aside .login-remember .icon i {
+  font-size: 25px;
+  color: var(--second-color);
+  opacity: 0;
+  overflow: hidden;
+}
+.form-login-aside .login-remember .icon .remember:checked i {
+  opacity: 1;
+}
+
+.landing-form-register {
+  position: fixed;
+  display: block;
+  border: 1px solid var(--first-color);
+  background: var(--first-color);
+  border-radius: 10px;
+  width: 550px;
+  top: 35%;
+  right: 15%;
+  height: 500px;
+  padding: 16px;
+  translate: 0;
+  opacity: 0;
+  transition: all 2s ease;
+}
+.landing-form-register .form-register-logo {
+  position: absolute;
+  top: -65px;
+  left: -80px;
+}
+.landing-form-register .form-register {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+  margin-top: 50px;
+}
