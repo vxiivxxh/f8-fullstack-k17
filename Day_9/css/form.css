@@ -100,10 +100,11 @@ a {
 }
 .landing-information svg {
   display: inline-block;
+  justify-content: center;
   align-items: center;
   fill: var(--first-color);
   width: 40px;
-  padding-top: 100px;
+  padding-top: 10px;
 }
 .landing-information p {
   color: var(--first-color);
@@ -115,22 +116,22 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: var(--first-color);
   margin-top: 75px;
   font-size: 1.6rem;
   font-weight: 700;
   border: 1px solid var(--first-color);
-  border-radius: 10px;
+  border-radius: 20px;
 }
 .landing-information .tab-switch label {
-  border: 1px solid #fff;
-  width: 280px;
-  height: 54px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  overflow: hidden;
 }
 
 .landing-information .tab-switch .login,
 .landing-information .tab-switch .register {
-  padding: 15px 100px;
+  padding: 15px 50px;
   font-size: 1.6rem;
   font-weight: bold;
   color: var(--first-color);
@@ -139,7 +140,7 @@ a {
 #login-toggle:checked ~ .landing-information label[for="login-toggle"],
 #register-toggle:checked ~ .landing-information label[for="register-toggle"] {
   color: black;
-  background: white;
+  background: var(--first-color);
 }
 
 /* Form */
@@ -153,7 +154,7 @@ a {
   border: 1px solid var(--first-color);
   background: var(--first-color);
   border-radius: 10px;
-  width: 550px;
+  width: 500px;
   top: 35%;
   right: 15%;
   height: 500px;
@@ -226,7 +227,7 @@ a {
 .form-login-aside .login-remember {
   display: flex;
   align-items: center;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   font-weight: 700;
   color: var(--text-color);
   cursor: pointer;
@@ -237,8 +238,8 @@ a {
   align-items: center;
   border: 1px solid #adafca94;
   border-radius: 6px;
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   overflow: hidden;
 }
 .form-login-aside .login-remember .icon i {
@@ -249,6 +250,16 @@ a {
 }
 .form-login-aside .login-remember .icon .remember:checked i {
   opacity: 1;
+}
+.form-login-aside .forgot-password {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #a5a9b3;
+  cursor: pointer;
+}
+
+.form-login-aside .forgot-password:hover {
+  color: var(--second-color);
 }
 
 .landing-form-register {
