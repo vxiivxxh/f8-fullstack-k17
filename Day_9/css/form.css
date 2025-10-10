@@ -206,7 +206,7 @@ a {
   transition: all 0.5s ease;
 }
 .input:focus {
-  border-color: #615dfa;
+  border-color: #625dfac4;
 }
 
 .input:focus ~ .label {
@@ -224,7 +224,8 @@ a {
   justify-content: space-between;
   font-size: 1.5rem;
 }
-.form-login-aside .login-remember {
+
+.landing-form-login .form-login .form-login-aside .login-remember {
   display: flex;
   align-items: center;
   font-size: 1.6rem;
@@ -232,7 +233,7 @@ a {
   color: var(--text-color);
   cursor: pointer;
 }
-.form-login-aside .login-remember .icon {
+.landing-form-login .form-login .form-login-aside .login-remember .icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -242,23 +243,29 @@ a {
   height: 20px;
   overflow: hidden;
 }
-.form-login-aside .login-remember .icon i {
+.landing-form-login .form-login .form-login-aside .login-remember .icon i {
   font-size: 25px;
   color: var(--second-color);
   opacity: 0;
   overflow: hidden;
 }
-.form-login-aside .login-remember .icon .remember:checked i {
+.landing-form-login
+  .form-login
+  .form-login-aside
+  .login-remember
+  .icon
+  .remember:checked
+  i {
   opacity: 1;
 }
-.form-login-aside .forgot-password {
+.landing-form-login .form-login .form-login-aside .forgot-password {
   font-size: 1.6rem;
   font-weight: 700;
   color: #a5a9b3;
   cursor: pointer;
 }
 
-.form-login-aside .forgot-password:hover {
+.landing-form-login .form-login .form-login-aside .forgot-password:hover {
   color: var(--second-color);
 }
 
@@ -276,13 +283,13 @@ a {
 .form-login button:hover {
   background-color: rgba(88, 83, 228, 0.295);
 }
-.form-login .social-links{
-   display: flex;
+.form-login .social-links {
+  display: flex;
   justify-content: center;
   gap: 10px;
 }
 
-.form-login .social-links i{
+.form-login .social-links i {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -313,7 +320,12 @@ a {
   background: #fd434f;
   transition: translate 0.5s;
 }
-
+.form-login .social-links #facebook:hover,
+.form-login .social-links #twitter:hover,
+.form-login .social-links #twitch:hover,
+.form-login .social-links #youtube:hover {
+  translate: 0 -15%;
+}
 
 .landing-form-register {
   position: fixed;
