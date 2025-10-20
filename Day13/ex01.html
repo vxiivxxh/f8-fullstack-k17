@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    />
+    <title>Ex1</title>
+  </head>
+  <body>
+    <!-- <h1 class="text-3xl font-bold uppercase text-center text-red-600">
+      F8- Học lập trình
+    </h1>
+    
+
+    <h2 class="text-[50px] font-[600] text-[rgb(106,205,100)]">Từ Bỏ CSS</h2>
+    
+    <h2
+      class="before:text-red-700 before:contents-[''] before:w-[20px] before:h-[20px] before:bg-red-600 text-3xl text-center inline-block text-blue-700"
+    >
+      Học Tailwind
+    </h2> -->
+  <body>
+    <section class="py-10 px-10 ">
+      <div class="max-w-[1200px] mx-auto px-3 xl:px-0 ">
+        <h2 class="text-center text-4xl mb-5">Danh sách sản phẩm:</h2>
+    </div>
+    <div class="flex  gap-2 flex-wrap">
+        <div class="border border-[#ddd] rounded-[12px] hover:shadow-sm group">
+            <a href="#" class="block relative">
+                <img
+                    src="https://fastly.picsum.photos/id/52/500/300.jpg?hmac=8eWKHKHnBbutU9P9kOQT7WeWj9aBVBksvfSRoQZcT9Q"
+                    alt=""
+                    class="rounded-t-[10px]"
+                />
+                <span
+                    class="absolute top-1 right-1 z-10 bg-red-800 inline-block p-1 text-white rounded-md"
+                    >35%</span
+                >
+                <i class="fa-regular fa-heart absolute bottom-1 right-1 text-white z-10 text-lg opacity-0 group-hover:opacity-100"></i>
+            </a>
+            <div class="p-[10px]">
+                <h3 class="text-2xl font-semibold hover:text-blue-400">
+                    <a href="#">Sản phẩm 1</a>
+                </h3>
+                <p class="text-xl font-semibold py-2 text-orange-400">12.000 đ</p>
+                <a
+                    href="#"
+                    class="inline-block bg-red-600 text-white py-2 px-5 rounded-full hover:bg-teal-400"
+                    >Đặt hàng</a
+                >
+            </div>
+        </div>
+        <div class="border border-[#ddd] rounded-[12px] group">
+            <a href="#" class="block relative">
+                <img
+                    src="https://fastly.picsum.photos/id/52/500/300.jpg?hmac=8eWKHKHnBbutU9P9kOQT7WeWj9aBVBksvfSRoQZcT9Q"
+                    alt=""
+                    class="rounded-t-[10px]"
+                />
+                <span
+                    class="absolute top-1 right-1 z-10 bg-red-800 inline-block p-1 text-white rounded-md"
+                    >35%</span
+                >
+                <i class="fa-regular fa-heart absolute bottom-1 right-1 text-white z-10 text-lg opacity-0 group-hover:opacity-100"></i>
+            </a>
+            <div class="p-[10px]">
+                <h3 class="text-2xl font-semibold hover:text-blue-400">
+                    <a href="#">Sản phẩm 2</a>
+                </h3>
+                <p class="text-xl font-semibold py-2 text-orange-400">12.000 đ</p>
+                <a
+                    href="#"
+                    class="inline-block bg-red-600 text-white py-2 px-5 rounded-full hover:bg-teal-400"
+                    >Đặt hàng</a
+                >
+            </div>
+        </div>
+        <div class="border border-[#ddd] rounded-[12px] group">
+            <a href="#" class="block relative">
+                <img
+                    src="https://fastly.picsum.photos/id/52/500/300.jpg?hmac=8eWKHKHnBbutU9P9kOQT7WeWj9aBVBksvfSRoQZcT9Q"
+                    alt=""
+                    class="rounded-t-[10px]"
+                />
+                <span
+                    class="absolute top-1 right-1 z-10 bg-red-800 inline-block p-1 text-white rounded-md"
+                    >35%</span
+                >
+                <i class="fa-regular fa-heart absolute bottom-1 right-1 text-white z-10 text-lg opacity-0 group-hover:opacity-100"></i>
+            </a>
+            <div class="p-[10px]">
+                <h3 class="text-2xl font-semibold hover:text-blue-400">
+                    <a href="#">Sản phẩm 3</a>
+                </h3>
+                <p class="text-xl font-semibold py-2 text-orange-400">12.000 đ</p>
+                <a
+                    href="#"
+                    class="inline-block bg-red-600 text-white py-2 px-5 rounded-full hover:bg-teal-400"
+                    >Đặt hàng</a
+                >
+            </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
