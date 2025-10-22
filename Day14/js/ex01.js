@@ -123,5 +123,8 @@ console.log(`total`, total);
 
 let salePrice = 560000;
 let saleRate = 15;
+//Tính giá gốc
+let price = salePrice /(100-saleRate) *100
+console.log(price);
 
 
