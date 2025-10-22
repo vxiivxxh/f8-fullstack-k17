@@ -1,0 +1,43 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 15px;
+}
+.input-text {
+  position: relative;
+  width: 300px;
+  top: 50px;
+  left: 50%;
+}
+.input-text input {
+  width: 100%;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  border: 2px solid black;
+  outline: none;
+}
+.input-text label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  font-size: 1.2rem;
+  color: #888;
+  background: #fff;
+  padding: 0 2px;
+  transition: all 0.5s ease;
+  cursor: text;
+}
+.input-text input:focus {
+  border-color: blue;
+}
+.input-text input:focus + label,
+.input-text input:not(:placeholder-shown) + label {
+  top: 0px;
+  font-size: 1rem;
+  color: blue;
+}
