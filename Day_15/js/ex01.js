@@ -58,10 +58,62 @@ console.log("Giảm", discountPercentage + "%");
 //Bài 8:
 let a2 = 2;
 let b2 = 4;
-a2 =a2+b2;//6
-b2= a2-b2;//2
-a2=a2-b2;//4
+a2 = a2 + b2; //6
+b2 = a2 - b2; //2
+a2 = a2 - b2; //4
 console.log("a=", a2);
 console.log(`b=${b2}`);
 
 //Bài 9:
+let monthlyKWh = 150;
+let totalBill = 0;
+
+const TIER_1_KWH = 50;
+const TIER_2_KWH = 100;
+const TIER_3_KWH = 200;
+const TIER_4_KWH = 300;
+const TIER_5_KWH = 400;
+
+const RATE_TIER_1 = 1.678;
+const RATE_TIER_2 = 1.734;
+const RATE_TIER_3 = 2.014;
+const RATE_TIER_4 = 2.536;
+const RATE_TIER_5 = 2.834;
+const RATE_TIER_6 = 2.927;
+
+if (monthlyKWh <= TIER_1_KWH) {
+  totalBill = monthlyKWh * RATE_TIER_1;
+} else if (monthlyKWh > TIER_1_KWH && monthlyKWh <= TIER_2_KWH) {
+  totalBill =
+    TIER_1_KWH * RATE_TIER_1 + (monthlyKWh - TIER_1_KWH) * RATE_TIER_2; //150-50 *1.734
+} else if (monthlyKWh > TIER_2_KWH && monthlyKWh <= TIER_3_KWH) {
+  totalBill =
+    TIER_1_KWH * RATE_TIER_1 +
+    (TIER_2_KWH - TIER_1_KWH) * RATE_TIER_2 +
+    (monthlyKWh - TIER_2_KWH) * RATE_TIER_3; //50*1.678+50*1.734+50*2.014
+} else if (monthlyKWh > TIER_3_KWH && monthlyKWh <= TIER_4_KWH) {
+  totalBill =
+    TIER_1_KWH * RATE_TIER_1 +
+    (TIER_2_KWH - TIER_1_KWH) * RATE_TIER_2 +
+    (TIER_3_KWH - TIER_2_KWH) * RATE_TIER_3 +
+    (monthlyKWh - TIER_3_KWH) * RATE_TIER_4;
+} else if (monthlyKWh > TIER_4_KWH && monthlyKWh <= TIER_5_KWH) {
+  totalBill =
+    TIER_1_KWH * RATE_TIER_1 +
+    (TIER_2_KWH - TIER_1_KWH) * RATE_TIER_2 +
+    (TIER_3_KWH - TIER_2_KWH) * RATE_TIER_3 +
+    (TIER_4_KWH - TIER_3_KWH) * RATE_TIER_4 +
+    (monthlyKWh - TIER_4_KWH) * RATE_TIER_5;
+} else {
+  totalBill =
+    TIER_1_KWH * RATE_TIER_1 +
+    (TIER_2_KWH - TIER_1_KWH) * RATE_TIER_2 +
+    (TIER_3_KWH - TIER_2_KWH) * RATE_TIER_3 +
+    (TIER_4_KWH - TIER_3_KWH) * RATE_TIER_4 +
+    (TIER_5_KWH - TIER_4_KWH) * RATE_TIER_5 +
+    (monthlyKWh - TIER_5_KWH) * RATE_TIER_6;
+}
+console.log(`Số tiền phải đóng hàng tháng là ${totalBill} đồng`);
+
+//Bài 10:
+let n=10;
