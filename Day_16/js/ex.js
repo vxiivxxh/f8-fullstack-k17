@@ -11,12 +11,16 @@ console.log(total);
 let a = 5;
 let b = 9;
 let isEven = 0;
-let isOdđ = 0;
+let isOdd = 0;
 for (let i = a; i <= b; i++) {
   if (i % 2 === 0) {
     isEven += i;
+  } else {
+    isOdd += i;
   }
 }
+console.log(`Tổng số chẵn: ${isEven}`);
+console.log(`Tổng số lẻ: ${isOdd}`);
 
 //Bài 3:
 let htmlString = "<table border='1'><tbody>";
