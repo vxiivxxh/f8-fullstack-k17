@@ -142,46 +142,5 @@ console.log(`Các số lẻ: ${isOdd}`);
 // "" + "0, " + "2, " + "4"
 // 0, 2, 4
 
-// Buổi 16 Bài 3
 
-let htmlString = "<table border='1'><tbody>";
 
-// Tạo hàng 1
-htmlString += "<tr>";
-for (let i = 1; i <= 5; i++) {
-  htmlString += `<th>${i}</th>`;
-}
-htmlString += "</tr>";
-
-// Tạo hàng 2
-htmlString += "<tr>";
-
-for (let i = 1; i <= 5; i++) {
-  htmlString += "<td>";
-  for (let j = 1; j <= 10; j++) {
-    htmlString += `<div>${i} x ${j} = ${i * j}</div>`;
-  }
-  htmlString += "</td>";
-}
-htmlString += "</tr>";
-
-// Tạo hàng 3
-htmlString += "<tr>";
-for (let i = 6; i <= 10; i++) {
-  htmlString += `<th>${i}</th>`;
-}
-htmlString += "</tr>";
-
-// Tạo hàng 4
-htmlString += "<tr>";
-
-for (let i = 6; i <= 10; i++) {
-  htmlString += "<td>";
-  for (let j = 1; j <= 10; j++) {
-    htmlString += `<div>${i} x ${j} = ${i * j}</div>`;
-  }
-  htmlString += "</td>";
-}
-htmlString += "</tr>";
-
-document.body.innerHTML = htmlString;
