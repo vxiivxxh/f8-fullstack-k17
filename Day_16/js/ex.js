@@ -92,7 +92,7 @@ console.log(`Tổng các số nguyên tố từ 1 đến 10 = ${getTotalPrime(10
 //Bài 5:
 
 //Bài6:
-function isCheckPerfectSquare(n) {
+function isPerfectSquare(n) {
   if (n < 0) {
     return false;
   }
@@ -103,11 +103,11 @@ function isCheckPerfectSquare(n) {
   }
   return false;
 }
-function isPerfectSquare(n) {
+function getPerfectSquare(n) {
   for (let i = 1; i <= n; i++) {
-    if (isCheckPerfectSquare(i)) {
+    if (isPerfectSquare(i)) {
       console.log(i);
     }
   }
 }
-isPerfectSquare(50);
+getPerfectSquare(50);
