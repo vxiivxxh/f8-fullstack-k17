@@ -65,9 +65,7 @@ htmlString += "</tr>";
 
 document.body.innerHTML = htmlString;
 
-//Bài4:Viết hàm tính tổng các số nguyên tố từ 1 đến n.
-
-//Lưu ý: Logic kiểm tra số nguyên tố tách thành 1 hàm khác. Có nghĩa sẽ có 2 hàm:
+//Bài4:
 
 function isPrime(n) {
   if (n % 1 !== 0 || n <= 1) {
@@ -93,7 +91,7 @@ console.log(`Tổng các số nguyên tố từ 1 đến 10 = ${getTotalPrime(10
 
 //Bài 5:
 
-//Bài6: Viết hàm in ra số chính phương trong khoảng từ 1 đến n.
+//Bài6:
 function isCheckPerfectSquare(n) {
   if (n < 0) {
     return false;
