@@ -1,5 +1,24 @@
-//Bài 1: Em đang chưa biết fibonancci là gì ạ
-const fibonacci = (n) => {};
+//Bài 1: 
+const fibonacci = (n) => {
+  if (n <= 0) {
+    return 0;
+  }
+  if (n === 1) {
+    return 1;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
+};
+const getTotalFibonacci = (n) => {
+  if (n <= 0) {
+    return 0;
+  }
+  let total = 0;
+  for (let i = 0; i < n; i++) {
+    total += fibonacci(i);
+  }
+  return total;
+};
+console.log(`Tổng n số fibonacci đầu tiên = ${getTotalFibonacci(10)}`);
 
 //Bài 2:
 function isTriange(a, b, c) {
@@ -34,7 +53,7 @@ const calcBMI = (weight, height) => {
 };
 console.log(calcBMI(74, 1.8));
 
-//Bài 4: Bài này thì em vẫn chưa nghĩ đc ạ bài này vs bài 6 theo em nghĩ thì nó na ná nhau 
+//Bài 4: Bài này thì em vẫn chưa nghĩ đc ạ bài này vs bài 6 theo em nghĩ thì nó na ná nhau
 // let fullname = "tạ hoàng an";
 // fullname=fullname.charAt(0).toUpperCase()+fullname.slice(1);
 
