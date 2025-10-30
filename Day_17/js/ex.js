@@ -1,4 +1,4 @@
-//Bài 1: 
+//Bài 1:
 const fibonacci = (n) => {
   if (n <= 0) {
     return 0;
@@ -53,9 +53,14 @@ const calcBMI = (weight, height) => {
 };
 console.log(calcBMI(74, 1.8));
 
-//Bài 4: Bài này thì em vẫn chưa nghĩ đc ạ bài này vs bài 6 theo em nghĩ thì nó na ná nhau
-// let fullname = "tạ hoàng an";
-// fullname=fullname.charAt(0).toUpperCase()+fullname.slice(1);
+//Bài 4:
+let fullname = "tạ hoàng an";
+const words = fullname.split(" ");
+for (let i = 0; i < words.length; i++) {
+  words[i] = words[i].charAt(0).toUpperCase() + words[i].slice(1);
+}
+fullname = words.join(" ");
+console.log(fullname);
 
 //Bài 5:
 const isAllUpperCase = (str) => {
@@ -69,3 +74,11 @@ const isAllUpperCase = (str) => {
 console.log(isAllUpperCase("VINH"));
 
 //Bài 6:
+
+const reverseWords = (str) => {
+  const trimmed = str.trim(); //Xoá khoảng trắng thừa
+  const words = trimmed.split(" "); //Tách chuỗi thành mảng từ
+  const reverseWords = words.reverse(); //Đảo ngược mảng
+  return reverseWords.join(" "); //Nối mảng thành chuỗi
+};
+console.log(reverseWords("Vũ Thành Vinh"));
