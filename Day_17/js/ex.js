@@ -77,7 +77,7 @@ console.log(isAllUpperCase("VINH"));
 
 const reverseWords = (str) => {
   const trimmed = str.trim(); //Xoá khoảng trắng thừa
-  const words = trimmed.split(" "); //Tách chuỗi thành mảng từ
+  const words = trimmed.split(" "); //Tách chuỗi thành mảng từ(tách theo khoảng trắng)
   const reverseWords = words.reverse(); //Đảo ngược mảng
   return reverseWords.join(" "); //Nối mảng thành chuỗi
 };
