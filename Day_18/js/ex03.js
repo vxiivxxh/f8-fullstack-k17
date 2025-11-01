@@ -19,3 +19,10 @@ for (let i = 0; i < bigNumber.length; i++) {
 console.log(bigNumberDivisible);
 
 //Với mảng ban đầu, tạo mảng mới tăng gấp đôi nhưng chỉ giữ lại số lẻ.
+const oddDouble = [];
+for (let i = 0; i < nums.length; i++) {
+  if (num[i] % 2 !== 0) {
+    oddDouble.push(num[i] * 2);
+  }
+}
+console.log(oddDouble);
