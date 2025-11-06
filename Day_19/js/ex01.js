@@ -44,12 +44,9 @@ for (let i = 0; i < myArr.length; i++) {
     sum += row[j];
     console.log(`Hàng ${i}: [${row}] => Tổng = ${sum}`);
   }
-  if (sum <= 10) {
-    console.log(`Tổng <=10 = ${sum}`);
-
-    continue;
+  if (sum > 10) {
+    console.log(`Tổng >10 = ${sum}`);
   }
-  console.log(`Tổng >10 = ${sum}`);
 
   filteredRows.push(row);
 }
