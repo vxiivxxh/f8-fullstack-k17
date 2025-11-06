@@ -21,7 +21,7 @@ const getTotalFibonacci = (n) => {
 console.log(`Tổng n số fibonacci đầu tiên = ${getTotalFibonacci(10)}`);
 
 //Bài 2:
-function isTriange(a, b, c) {
+function isTriangle(a, b, c) {
   if (a <= 0 || b <= 0 || c <= 0) {
     return false;
   }
