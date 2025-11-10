@@ -15,3 +15,4 @@ const posts = [
     comments: [{ user: "Chi", text: "Cảm ơn chia sẻ" }],
   },
 ];
+//In ra tất cả title kèm số lượng comments của từng bài viết.
