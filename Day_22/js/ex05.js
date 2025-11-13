@@ -18,3 +18,6 @@ const totalWatchTime = watchHistory.reduce((acc, record) => {
   return acc;
 }, {});
 console.log(totalWatchTime);
+
+
+//Em thấy mấy bài cx tương tự nhau, thì a hướng dẫn em 1 2 bài rồi chắc mấy bài kia em tự làm ạ
