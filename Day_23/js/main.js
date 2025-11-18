@@ -30,7 +30,7 @@ const validateEmailFormat = (email) => {
 };
 
 //Hiển thị Error
-function showError(input, message, iconEl, errorEl, baseClass) {
+function showError(input, message, errorEl, baseClass) {
   // Reset về class gốc + border đỏ
   input.className = baseClass + " border-red-500 bg-red-50 focus:ring-red-500";
 
