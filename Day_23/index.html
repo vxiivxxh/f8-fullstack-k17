@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <title>Bài tập về nhà buổi 23 Register Form</title>
   </head>
   <body>
@@ -15,54 +17,81 @@
         class="mx-auto bg-white p-10 rounded-lg shadow-lg w-full max-w-md"
       >
         <h1 class="text-3xl font-bold mb-10">Create a new account</h1>
+        
+     
         <div class="mb-6">
-          <label for="username" class="block text-gray-700 font-semibold mb-2"
-            >Username</label
-          >
-          <input
-            type="text"
-            id="username"
-            name="username"
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
-            required
-          />
+          <label for="username" class="block text-gray-700 font-semibold mb-2">
+            Username
+          </label>
+          <div class="relative">
+            <input
+              type="text"
+              placeholder="webcrunch"
+              id="username"
+              name="username"
+              class="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+              required
+            />
+            <span id="icon-username" class="absolute right-3 top-1/2 -translate-y-1/2 hidden"></span>
+          </div>
+          <p id="error-username" class="text-red-500 text-sm mt-1 hidden"></p>
         </div>
+
+       
         <div class="mb-6">
-          <label for="email" class="block text-gray-700 font-semibold mb-2"
-            >Email</label
-          >
-          <input
-            type="email"
-            id="email"
-            name="email"
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
-            required
-          />
+          <label for="email" class="block text-gray-700 font-semibold mb-2">
+            Email
+          </label>
+          <div class="relative">
+            <input
+              type="email"
+              placeholder="andy@web-crunch.com"                       
+              id="email"
+              name="email"
+              class="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+              required
+            />
+            <span id="icon-email" class="absolute right-3 top-1/2 -translate-y-1/2 hidden"></span>
+          </div>
+          <p id="error-email" class="text-red-500 text-sm mt-1 hidden"></p>
         </div>
-        <div class="mb-6">
-          <label for="password" class="block text-gray-700 font-semibold mb-2"
-            >Password</label
-          >
-          <input
-            type="password"
-            id="password"
-            name="password"
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
-            required
-          />
-        </div>
+
+       
         <div class="mb-6">
           <label for="password" class="block text-gray-700 font-semibold mb-2">
-            Password Confirmation</label
-          >
-          <input
-            type="password"
-            id="check-password"
-            name="check-password"
-            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
-            required
-          />
+            Password
+          </label>
+          <div class="relative">
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+              required
+            />
+            <span id="icon-password" class="absolute right-3 top-1/2 -translate-y-1/2 hidden"></span>
+          </div>
+          <p id="error-password" class="text-red-500 text-sm mt-1 hidden"></p>
         </div>
+
+      
+        <div class="mb-6">
+          <label for="check-password" class="block text-gray-700 font-semibold mb-2">
+            Password Confirmation
+          </label>
+          <div class="relative">
+            <input
+              type="password"
+              id="check-password"
+              name="check-password"
+              class="w-full px-3 py-2 pr-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-violet-500"
+              required
+            />
+            <span id="icon-confirm" class="absolute right-3 top-1/2 -translate-y-1/2 hidden"></span>
+          </div>
+          <p id="error-confirm" class="text-red-500 text-sm mt-1 hidden"></p>
+        </div>
+
         <button
           type="submit"
           class="w-full bg-violet-500 text-white font-semibold py-2 rounded-lg hover:bg-violet-600 transition duration-300"
