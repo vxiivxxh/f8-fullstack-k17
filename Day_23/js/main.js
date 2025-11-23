@@ -207,7 +207,11 @@ function validateConfirm() {
   return true;
 }
 
-
+// Real-time validation
+username.addEventListener("input", validateUsername);
+email.addEventListener("input", validateEmail);
+password.addEventListener("input", validatePassword);
+confirmPassword.addEventListener("input", validateConfirm);
 
 // Form submit
 form.addEventListener("submit", function (e) {

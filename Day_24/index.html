@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <title>Bài tập về nhà buổi 24 Todo-App</title>
+  </head>
+  <body>
+    <div class="bg-purple-700 w-screen min-h-screen flex py-10">
+      <div
+        class="mt-[80px] w-[450px] m-auto p-6 bg-[#1a1a40] rounded-lg shadow-2xl"
+      >
+        <div class="mx-auto flex flex-col p-5 gap-6 w-full">
+          <h1 class="text-white font-semibold text-2xl text-center">
+            Get Things Done !
+          </h1>
+          <form id="todoForm" class="flex w-full">
+            <input
+              type="text"
+              id="taskInput"
+              placeholder="What is the task today?"
+              class="todoInput flex-1 border border-gray-400 focus:outline-none focus:ring-0 focus:border-gray-400 px-3 py-2 text-white bg-[#0f0f2b]"
+            />
+
+            <button
+              type="submit"
+              class="btn p-3 bg-violet-600 hover:bg-violet-500 text-white font-bold cursor-pointer"
+            >
+              Add task
+            </button>
+          </form>
+          <p id="errorMsg" class="hidden text-red-400 text-sm -mt-4"></p>
+          <ul id="todoList" class="flex flex-col gap-4"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
