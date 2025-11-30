@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Bài tập về nhà buổi 25</title>
+  </head>
+
+  <body class="bg-gray-100 min-h-screen">
+    <div
+      class="relative w-full h-[400px] overflow-hidden rounded-xl shadow-2xl"
+      id="slideshow"
+    >
+      <!-- Track -->
+      <div class="track flex transition-transform duration-500 ease-in-out">
+        <!-- Slide 1 -->
+        <div class="slide min-w-full h-[400px] bg-gray-200">
+          <img src="images/image 1.jpg" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="slide min-w-full h-[400px] bg-gray-200">
+          <img src="images/image 2.jpg" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="slide min-w-full h-[400px] bg-gray-200">
+          <img src="images/image 3.jpg" class="w-full h-full object-cover" />
+        </div>
+
+        <!-- Slide 4 -->
+        <div class="slide min-w-full h-[400px] bg-gray-200">
+          <img src="images/image 4.jpg" class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+      <!-- Nút PREV -->
+      <button
+        id="prev"
+        class="absolute top-1/2 -translate-y-1/2 left-3 bg-gray-500/70 text-white w-8 h-8 flex items-center justify-center text-xl"
+      >
+        ❮
+      </button>
+
+      <!-- Nút NEXT -->
+      <button
+        id="next"
+        class="absolute top-1/2 -translate-y-1/2 right-3 bg-gray-500/70 text-white w-8 h-8 flex items-center justify-center text-xl"
+      >
+        ❯
+      </button>
+
+      <!-- Navigation -->
+      <div
+        id="dots"
+        class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-3"
+      ></div>
+    </div>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
