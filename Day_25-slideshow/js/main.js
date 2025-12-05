@@ -9,7 +9,8 @@ let total = slides.length;
 let current = 0;
 //Cập nhật slide
 function updateSlide() {
-  track.style.transform = `transLateX(-${current * 100}%)`;
+  track.style.transform = `translateX(-${current * 100}%)`;
+  updateDots();
 }
 
 // Tạo các chấm điều hướng
@@ -17,41 +18,39 @@ function createDots() {
   for (let i = 0; i < total; i++) {
     const dot = document.createElement("span");
     dot.className =
-      "w-3 h-3 rounded-full bg-white/50 cursor-pointer transition-all hover:bg-white/80 hover:scale-110";
+      "w-3 h-3 rounded-full bg-red-600/40 cursor-pointer transition-all hover:bg-red-600";
     if (i === current) {
       dot.className =
-        "w-8 h-3 rounded-md bg-white cursor-pointer transition-all";
+        "w-3 h-3 rounded-full bg-red-600 cursor-pointer transition-all shadow-lg shadow-red-600/50";
     }
+
     dot.addEventListener("click", () => {
       current = i;
       updateSlide();
     });
     dotsContainer.appendChild(dot);
   }
-  function updateDots() {
-    const dots = dotsContainer.children;
+}
+function updateDots() {
+  const dots = dotsContainer.children;
 
-    for (let i = 0; i < dots.length; i++) {
-      if (i === current) {
-        dots[i].className =
-          "w-8 h-3 rounded-md bg-white cursor-pointer transition-all";
-      } else {
-        dots[i].className =
-          "w-3 h-3 rounded-full bg-white/50 cursor-pointer transition-all hover:bg-white/80 hover:scale-110";
-      }
+  for (let i = 0; i < dots.length; i++) {
+    if (i === current) {
+      dots[i].className =
+        "w-3 h-3 rounded-full bg-red-500 cursor-pointer transition-all shadow-lg shadow-red-600/50";
+    } else {
+      dots[i].className =
+        "w-3 h-3 rounded-full bg-red-600/40 cursor-pointer transition-all hover:bg-red-600";
     }
   }
-  updateDots();
 }
 //Nút Next
 btnNext.addEventListener("click", () => {
-  // Tăng index slide, nếu vượt ra  slide cuối thì quay về đầu
   current = (current + 1) % total;
   updateSlide();
 });
 //Nút Prev
 btnPrev.addEventListener("click", () => {
-  // Lùi slide, nếu đang ở slide 0 thì quay về slide cuối
   current = (current - 1 + total) % total;
   updateSlide();
 });
@@ -72,4 +71,5 @@ document.addEventListener("keydown", (e) => {
     updateSlide();
   }
 });
+createDots();
 updateSlide();
