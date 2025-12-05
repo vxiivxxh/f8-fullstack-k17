@@ -13,9 +13,36 @@ function updateSlide() {
 }
 
 // Tạo các chấm điều hướng
-// function createDots() {
-//   for (let i = 0; i < total; i++) {}
-// }
+function createDots() {
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement("span");
+    dot.className =
+      "w-3 h-3 rounded-full bg-white/50 cursor-pointer transition-all hover:bg-white/80 hover:scale-110";
+    if (i === current) {
+      dot.className =
+        "w-8 h-3 rounded-md bg-white cursor-pointer transition-all";
+    }
+    dot.addEventListener("click", () => {
+      current = i;
+      updateSlide();
+    });
+    dotsContainer.appendChild(dot);
+  }
+  function updateDots() {
+    const dots = dotsContainer.children;
+
+    for (let i = 0; i < dots.length; i++) {
+      if (i === current) {
+        dots[i].className =
+          "w-8 h-3 rounded-md bg-white cursor-pointer transition-all";
+      } else {
+        dots[i].className =
+          "w-3 h-3 rounded-full bg-white/50 cursor-pointer transition-all hover:bg-white/80 hover:scale-110";
+      }
+    }
+  }
+  updateDots();
+}
 //Nút Next
 btnNext.addEventListener("click", () => {
   // Tăng index slide, nếu vượt ra  slide cuối thì quay về đầu
