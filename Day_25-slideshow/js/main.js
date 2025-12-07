@@ -16,9 +16,41 @@ function updateSlide() {
 }
 
 // Tạo các chấm điều hướng
-// function createDots() {
-//   for (let i = 0; i < total; i++) {}
-// }
+function createDots() {
+  for (let i = 0; i < total; i++) {
+    const dot = document.createElement("span");
+    dot.className =
+      "w-3 h-3 rounded-full bg-white/30 border-2 border-white cursor-pointer transition-all hover:bg-white hover:scale-110";
+
+    if (i === current) {
+      dot.className =
+        "w-3 h-3 rounded-full bg-white border-2 border-white cursor-pointer transition-all shadow-lg";
+    }
+
+    dot.addEventListener("click", () => {
+      current = i;
+      updateSlide();
+      resetAutoPlay();
+    });
+
+    dotsContainer.appendChild(dot);
+  }
+}
+
+// Cập nhật trạng thái chấm
+function updateDots() {
+  const dots = dotsContainer.children;
+
+  for (let i = 0; i < dots.length; i++) {
+    if (i === current) {
+      dots[i].className =
+        "w-3 h-3 rounded-full bg-white border-2 border-white cursor-pointer transition-all shadow-lg";
+    } else {
+      dots[i].className =
+        "w-3 h-3 rounded-full bg-white/30 border-2 border-white cursor-pointer transition-all hover:bg-white hover:scale-110";
+    }
+  }
+}
 //Nút Next
 btnNext.addEventListener("click", () => {
   current = (current + 1) % total;
