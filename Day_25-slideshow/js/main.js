@@ -13,60 +13,14 @@ let current = 0;
 //Cập nhật slide
 function updateSlide() {
   track.style.transform = `transLateX(-${current * 100}%)`;
-  updateDots();
 }
 
 // Tạo các chấm điều hướng
-function createDots() {
-  for (let i = 0; i < total; i++) {
-    const dot = document.createElement("span");
-    dot.className = "dot";
-    if (i === current) {
-      dot.classList.add("active");
-    }
-    dot.addEventListener("click", () => {
-      current = i;
-      updateSlide();
-      resetAutoPlay();
-    });
-    dotsContainer.appendChild(dot);
-  }
-}
-
-// Cập nhật trạng thái chấm
-function updateDots() {
-  const dots = document.querySelectorAll(".dot");
-  dots.forEach((dot, index) => {
-    dot.classList.toggle("active", index === current);
-  });
-}
-
-function startAutoPlay() {
-  if (autoPlayInterval) {
-    clearInterval(autoPlayInterval);
-  }
-  autoPlayInterval = setInterval(() => {
-    if (!isUserInteracting) {
-      current = (current + 1) % total;
-      updateSlide();
-    }
-  }, 5000);
-}
-function stopAutoPlay() {
-  if (autoPlayInterval) {
-    clearInterval(autoPlayInterval);
-    autoPlayInterval = null;
-  }
-}
-
-function resetAutoPlay() {
-  stopAutoPlay();
-  startAutoPlay();
-}
-
+// function createDots() {
+//   for (let i = 0; i < total; i++) {}
+// }
 //Nút Next
 btnNext.addEventListener("click", () => {
-  // Tăng index slide, nếu vượt ra  slide cuối thì quay về đầu
   current = (current + 1) % total;
   updateSlide();
   resetAutoPlay();
@@ -74,7 +28,6 @@ btnNext.addEventListener("click", () => {
 
 //Nút Prev
 btnPrev.addEventListener("click", () => {
-  // Lùi slide, nếu đang ở slide 0 thì quay về slide cuối
   current = (current - 1 + total) % total;
   updateSlide();
   resetAutoPlay();
