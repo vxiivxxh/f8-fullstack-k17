@@ -12,7 +12,8 @@ let isUserInteracting = false;
 let current = 0;
 //Cập nhật slide
 function updateSlide() {
-  track.style.transform = `transLateX(-${current * 100}%)`;
+  track.style.transform = `translateX(-${current * 100}%)`;
+  updateDots();
 }
 
 // Tạo các chấm điều hướng
@@ -51,6 +52,27 @@ function updateDots() {
     }
   }
 }
+function startAutoPlay() {
+  if (autoPlayInterval) {
+    clearInterval(autoPlayInterval);
+  }
+  autoPlayInterval = setInterval(() => {
+    if (!isUserInteracting) {
+      current = (current + 1) % total;
+      updateSlide();
+    }
+  }, 2000);
+}
+function stopAutoPlay() {
+  if (autoPlayInterval) {
+    clearInterval(autoPlayInterval);
+    autoPlayInterval = null;
+  }
+}
+function resetAutoPlay() {
+  stopAutoPlay();
+  startAutoPlay();
+}
 //Nút Next
 btnNext.addEventListener("click", () => {
   current = (current + 1) % total;
@@ -77,21 +99,18 @@ slideshow.addEventListener("mouseleave", () => {
   startAutoPlay();
 });
 
-//Tự động chuyển slide
-setInterval(() => {
-  current = (current + 1) % total;
-  updateSlide();
-}, 5000);
-
 // Hỗ trợ phím mũi tên
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") {
     current = (current - 1 + total) % total;
     updateSlide();
+    resetAutoPlay();
   } else if (e.key === "ArrowRight") {
     current = (current + 1) % total;
     updateSlide();
+    resetAutoPlay();
   }
 });
 createDots();
 updateSlide();
+startAutoPlay();
