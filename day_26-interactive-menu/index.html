@@ -39,9 +39,6 @@
       min-width: 150px;
       display: none;
     }
-    .context-menu.active {
-      display: block;
-    }
     .context-menu-item {
       padding: 10px 15px;
       cursor: pointer;
@@ -51,59 +48,85 @@
       background: #f0f0f0;
     }
 
-    input[type="text"] {
-      border: 2px solid green;
-      padding: 4px 8px;
-      border-radius: 4px;
-      outline: none;
-    }
     .overlay {
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       bottom: 0;
-      background: rgba(0, 0, 0, 0.1);
+      background: rgba(0, 0, 0, 0.3);
       z-index: 999;
       display: none;
+      justify-content: center;
+      align-items: center;
     }
-    .overlay.active {
-      display: block;
+    .overlay form {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .overlay input[type="text"] {
+      border: 2px solid green;
+      padding: 8px 12px;
+      border-radius: 4px;
+      outline: none;
+      width: 250px;
+      margin-bottom: 10px;
+    }
+
+    .overlay button {
+      padding: 8px 16px;
+      background: green;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .overlay button:hover {
+      background: darkgreen;
     }
   </style>
   <body>
     <ul>
       <li>
-        Item 1
+        <span class="textItem">Item 1</span>
         <span class="up">Up</span>
         <span class="down">Down</span>
       </li>
       <li>
-        Item 2
+        <span class="textItem">Item 2</span>
         <span class="up">Up</span>
         <span class="down">Down</span>
       </li>
       <li>
-        Item 3
+        <span class="textItem">Item 3</span>
         <span class="up">Up</span>
         <span class="down">Down</span>
       </li>
       <li>
-        Item 4
+        <span class="textItem">Item 4</span>
         <span class="up">Up</span>
         <span class="down">Down</span>
       </li>
       <li>
-        Item 5
+        <span class="textItem">Item 5</span>
         <span class="up">Up</span>
         <span class="down">Down</span>
       </li>
     </ul>
-    <div class="context-menu" id="contextMenu">
-      <div class="context-menu-item" data-action="rename">Đổi tên</div>
-      <div class="context-menu-item" data-action="delete">Xóa</div>
+    <div class="context-menu">
+      <div class="context-menu-item rename">Đổi tên</div>
+      <div class="context-menu-item delete">Xóa</div>
     </div>
-    <div class="overlay" id="overlay"></div>
-    <script src="js/ex02.js"></script>
+    <div class="overlay">
+      <form>
+        <input type="text" placeholder="Nhập tên mới..." />
+        <button type="submit">Lưu</button>
+      </form>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
