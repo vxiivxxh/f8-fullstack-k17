@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài tập về nhà buổi 29</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+      .btn-active {
+        @apply bg-green-500;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="max-w-[80%] mx-auto py-3">
+      <h1 class="text-3xl font-bold text-center">Blogs</h1>
+      <input
+        type="search"
+        placeholder="Search..."
+        class="js-search border border-gray-300 w-full py-2 px-3 outline-none my-3"
+      />
+      <button
+        class="js-add-post cursor-pointer border border-gray-300 py-2 px-5 hover:bg-green-600"
+      >
+        Thêm mới
+      </button>
+      <div class="js-sort flex gap-3 mt-3">
+        <button
+          data-sort="desc"
+          class="btn-active cursor-pointer border border-gray-300 py-2 px-5"
+        >
+          Mới nhất
+        </button>
+        <button
+          data-sort="asc"
+          class="cursor-pointer border border-gray-300 py-2 px-5"
+        >
+          Cũ nhất
+        </button>
+      </div>
+      <div class="js-loading"></div>
+      <div class="js-post-list"></div>
+      <div class="js-paginate"></div>
+    </main>
+
+    <div
+      id="modal"
+      class="fixed inset-0 bg-white/10 backdrop-blur-[2px] hidden items-center justify-center z-50"
+    >
+      <div class="bg-white rounded-lg w-[800px] max-w-[95%] relative shadow-2xl max-h-[90vh] flex flex-col">
+        <button
+          id="closeModal"
+          class="absolute right-3 top-2 text-xl text-gray-600 hover:text-gray-900 cursor-pointer z-10"
+        >
+          ×
+        </button>
+        <div id="modalContent" class="bg-white rounded-lg text-gray-900 overflow-y-auto"></div>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+  </body>
+</html>
