@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 const Header = () => {
   return (
-    <nav style={{ display: "flex", gap: 20, padding: 20 }}>
+    <nav>
       <NavLink to="/" end>
         Home |
       </NavLink>
