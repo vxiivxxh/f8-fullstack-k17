@@ -1,0 +1,160 @@
+/* Global Styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header Styles */
+.header-nav {
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.nav-link {
+  text-decoration: none;
+  margin-right: 10px;
+  color: blue;
+}
+
+.nav-link.active {
+  color: red;
+  font-weight: bold;
+}
+
+.nav-separator {
+  margin: 0 5px;
+}
+
+/* Products Page Styles */
+.products-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.product-item {
+  margin-bottom: 20px;
+}
+
+.product-thumbnail-wrapper {
+  margin-bottom: 10px;
+}
+
+.product-thumbnail {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.product-title {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+.product-price {
+  margin-bottom: 5px;
+}
+
+.product-link {
+  color: blue;
+  text-decoration: underline;
+}
+
+.pagination-container {
+  display: flex;
+  gap: 5px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+.pagination-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.pagination-btn.active {
+  background-color: yellow;
+  font-weight: bold;
+}
+
+.pagination-btn-next {
+  height: 30px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+}
+
+.pagination-btn-next:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.error-message {
+  color: red;
+}
+
+/* Product Detail Styles */
+.product-detail-container {
+  padding: 20px;
+}
+
+.detail-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.detail-main-image-wrapper {
+  margin-bottom: 10px;
+}
+
+.detail-main-image {
+  width: 500px;
+  height: auto;
+  object-fit: contain;
+}
+
+.detail-thumbnails-container {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+}
+
+.detail-thumbnail {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+  border: 1px solid #ccc;
+}
+
+.detail-thumbnail.active {
+  border: 1px solid black;
+}
+
+.detail-product-name {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.detail-price {
+  font-size: 14px;
+}
