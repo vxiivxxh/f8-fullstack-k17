@@ -1,8 +1,16 @@
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate, useLocation } from "react-router-dom";
 import { useAuth } from "../stores/authStore";
 
 export default function UserLayout() {
   const { logout, user } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLogout = () => {
+    const from = location.pathname + location.search;
+    logout();
+    navigate(`/login?continue=${encodeURIComponent(from)}`);
+  };
 
   return (
     <div>
@@ -12,7 +20,7 @@ export default function UserLayout() {
         <Link to={"#"}>Account</Link>
         <Link to={"#"}>My order</Link>
         {user && <span>Hi, {user.name}</span>}
-        <button onClick={logout}>Logout</button>
+        <button onClick={handleLogout}>Logout</button>
       </div>
       <Outlet />
     </div>
