@@ -8,10 +8,10 @@ export default function Step1() {
       <div className="grid grid-cols-2 gap-6">
         <FormInput
           name="firstName"
-          label="Tên"
+          label="Họ"
           placeholder="e.g. John"
         />
-        <FormInput name="lastName" label="Họ" placeholder="e.g. Doe" />
+        <FormInput name="lastName" label="Tên" placeholder="e.g. Doe" />
         <FormInput name="age" label="Tuổi" type="number" placeholder="e.g. 18" />
         <FormInput name="email" label="Email" placeholder="e.g. john@doe.com" />
       </div>
