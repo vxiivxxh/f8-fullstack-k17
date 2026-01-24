@@ -7,10 +7,10 @@ const Step4 = () => {
 
   const formattedValues = {
     email: values.email,
-    age: Number(values.age),
-    firstName: values.firstName,
-    lastName: values.lastName,
-    username: values.username,
+    Tuổi: Number(values.age),
+    Họ: values.firstName,
+    Tên: values.lastName,
+    "Tên đăng nhập": values.username,
   };
 
   return (
