@@ -13,13 +13,10 @@ export const contactInfoSchema = z.object({
     })
     .min(1, "Vui lòng nhập Tuổi"),
 });
-
 export const usernameSchema = z.object({
   username: z.string().min(1, "Vui lòng nhập Tên đăng nhập").trim(),
 });
-
 export const asyncSchema = z.object({});
-
 export const combinedSchema = z
   .object({
     ...contactInfoSchema.shape,
@@ -38,4 +35,4 @@ export const combinedSchema = z
         path: ["username"],
       });
     }
-  });
+  }); 

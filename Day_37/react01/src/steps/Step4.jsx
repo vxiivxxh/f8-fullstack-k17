@@ -15,7 +15,7 @@ const Step4 = () => {
 
   return (
     <div className="text-left animate-in zoom-in duration-500">
-      <h2 className="text-3xl font-bold mb-4 text-emerald-400 uppercase ">
+      <h2 className="text-3xl font-bold mb-4 text-emerald-400 uppercase">
         Chúc mừng!
       </h2>
       <p className="text-gray-300 mb-4 text-lg">
