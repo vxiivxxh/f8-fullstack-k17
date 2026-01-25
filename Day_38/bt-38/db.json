@@ -1,0 +1,221 @@
+{
+  "deals": [
+    {
+      "id": 1,
+      "name": "Vegan Choice 1",
+      "discount": "-40%",
+      "category": "vegan",
+      "img": "/assets/Group8.png"
+    },
+    {
+      "id": 2,
+      "name": "Vegan Choice 2",
+      "discount": "-20%",
+      "category": "vegan",
+      "img": "/assets/Group.png"
+    },
+    {
+      "id": 3,
+      "name": "Vegan Choice 3",
+      "discount": "-15%",
+      "category": "vegan",
+      "img": "/assets/Group8.png"
+    },
+    {
+      "id": 4,
+      "name": "Salmon Sushi",
+      "discount": "-40%",
+      "category": "sushi",
+      "img": "/assets/Group8.png"
+    },
+    {
+      "id": 5,
+      "name": "Spicy Tuna Roll",
+      "discount": "-25%",
+      "category": "sushi",
+      "img": "/assets/Group.png"
+    },
+    {
+      "id": 6,
+      "name": "Sushi Platter",
+      "discount": "-30%",
+      "category": "sushi",
+      "img": "/assets/Group8.png"
+    },
+    {
+      "id": 7,
+      "name": "Pepperoni Pizza",
+      "discount": "-40%",
+      "category": "pizza",
+      "img": "/assets/Group.png"
+    },
+    {
+      "id": 8,
+      "name": "Margherita Pizza",
+      "discount": "-20%",
+      "category": "pizza",
+      "img": "/assets/Group8.png"
+    },
+    {
+      "id": 9,
+      "name": "BBQ Chicken Pizza",
+      "discount": "-15%",
+      "category": "pizza",
+      "img": "/assets/Group.png"
+    },
+    {
+      "id": 10,
+      "name": "Fish & Chips",
+      "discount": "-30%",
+      "category": "others",
+      "img": "/assets/Group8.png"
+    },
+    {
+      "id": 11,
+      "name": "Caesar Salad",
+      "discount": "-10%",
+      "category": "others",
+      "img": "/assets/Group.png"
+    },
+    {
+      "id": 12,
+      "name": "Grilled Chicken",
+      "discount": "-25%",
+      "category": "others",
+      "img": "/assets/Group8.png"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "name": "Burgers & Fast food",
+      "count": "21 Restaurants",
+      "img": "/assets/Rectangle13.png",
+      "bgColor": "bg-[#F5F5E2]"
+    },
+    {
+      "id": 2,
+      "name": "Salads",
+      "count": "32 Restaurants",
+      "img": "/assets/Rectangle15.png",
+      "bgColor": "bg-[#F5F5F5]"
+    },
+    {
+      "id": 3,
+      "name": "Pasta & Casuals",
+      "count": "4 Restaurants",
+      "img": "/assets/Rectangle17.png",
+      "bgColor": "bg-[#F5F5F5]"
+    },
+    {
+      "id": 4,
+      "name": "Pizza",
+      "count": "32 Restaurants",
+      "img": "/assets/Rectangle19.png",
+      "bgColor": "bg-[#F5F5F5]"
+    },
+    {
+      "id": 5,
+      "name": "Breakfast",
+      "count": "4 Restaurants",
+      "img": "/assets/Rectangle21.png",
+      "bgColor": "bg-[#F5F5F5]"
+    },
+    {
+      "id": 6,
+      "name": "Soups",
+      "count": "32 Restaurants",
+      "img": "/assets/Rectangle23.png",
+      "bgColor": "bg-[#F5F5F5]"
+    }
+  ],
+  "restaurants": [
+    {
+      "id": 1,
+      "name": "McDonald's London",
+      "img": "/assets/Rectangle_13.png",
+      "bgColor": "bg-[#DA3236]"
+    },
+    {
+      "id": 2,
+      "name": "Papa Johns",
+      "img": "/assets/Rectangle_13_1.png",
+      "bgColor": "bg-[#007E46]"
+    },
+    {
+      "id": 3,
+      "name": "KFC West London",
+      "img": "/assets/Rectangle_13_2.png",
+      "bgColor": "bg-[#E4002B]"
+    },
+    {
+      "id": 4,
+      "name": "Texas Chicken",
+      "img": "/assets/Rectangle_13_3.png",
+      "bgColor": "bg-[#0052B4]"
+    },
+    {
+      "id": 5,
+      "name": "Burger King",
+      "img": "/assets/Rectangle_13_4.png",
+      "bgColor": "bg-[#D65F11]"
+    },
+    {
+      "id": 6,
+      "name": "Shaurma 1",
+      "img": "/assets/Rectangle_13_5.png",
+      "bgColor": "bg-[#FFC300]"
+    }
+  ],
+  "stats": [
+    { "id": 1, "number": "546+", "label": "Registered Riders" },
+    { "id": 2, "number": "789,900+", "label": "Orders Delivered" },
+    { "id": 3, "number": "690+", "label": "Restaurants Partnered" },
+    { "id": 4, "number": "17,457+", "label": "Food items" }
+  ],
+  "partners": [
+    {
+      "id": 1,
+      "badge": "Earn more with lower fees",
+      "label": "Signup as a business",
+      "title": "Partner with us",
+      "image": "/assets/chef.png",
+      "buttonText": "Get Started"
+    },
+    {
+      "id": 2,
+      "badge": "Avail exclusive perks",
+      "label": "Signup as a rider",
+      "title": "Ride with us",
+      "image": "/assets/rider.png",
+      "buttonText": "Get Started"
+    }
+  ],
+  "faqs": [
+    {
+      "id": 1,
+      "question": "How does Order.UK work?",
+      "answer": "Order.UK simplifies the food ordering process. Browse through our diverse menu, select your favorite dishes, and proceed to checkout. Your delicious meal will be on its way to your doorstep in no time!"
+    },
+    {
+      "id": 2,
+      "question": "What payment methods are accepted?",
+      "answer": "We accept all major credit and debit cards, as well as PayPal and Apple Pay. You can also pay with cash on delivery."
+    },
+    {
+      "id": 3,
+      "question": "Can I track my order in real-time?",
+      "answer": "Yes, you can track your order in real-time using our mobile app or website. You will receive updates at every stage of the delivery process."
+    },
+    {
+      "id": 4,
+      "question": "Are there any special discounts or promotions available?",
+      "answer": "Check our 'Special Offers' section for the latest deals and discounts. We also send exclusive promotions to our newsletter subscribers."
+    },
+    {
+      "id": 5,
+      "question": "Is Order.UK available in my area?",
+      "answer": "Enter your postcode on our homepage to see if we deliver to your area. We are constantly expanding our delivery zones."
+    }
+  ]
+}
